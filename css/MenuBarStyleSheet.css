@@ -1,0 +1,60 @@
+﻿* { padding: 0; margin: 0; }
+
+body {font-family: Segoe UI Light; font-size: 14px;}
+
+#container { width: 960px; margin: auto; opacity: 0.5;}
+
+#content { width: 100%; height: 300px; }
+#content p { padding: 5px; }
+
+/* MAIN MENU */
+nav { margin-top: 150px;}
+nav ul { list-style: none; background: #050505; border-radius: 5px; padding: 0 5px;}
+nav ul:after { content: '.'; clear: both; visibility: hidden; display: block; height: 0px; }
+
+nav ul li { float: left; position: relative; line-height: 20px; }
+nav ul li a { display: block; color: #fff; text-decoration: none; padding: 14px 15px 15px; font-size: 20px; -webkit-transition: 0.25s ease-out; }
+nav ul li:hover > a { color: #4DACFF; }
+nav ul li#men:hover > a { color: #4DACFF; }
+nav ul li#women:hover > a { color: #FF4282; }
+
+
+/* SUB MENU */
+nav ul li > ul:before {
+	content: "";
+	border-style: solid;
+	border-width: 0 9px 9px 9px;
+	border-color: transparent transparent #050505 transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 15px;
+	top: 5px;
+}
+
+nav ul li > ul { position: absolute; left: 14px; top: 80%; padding-top: 13px; background: none; width: 150px; z-index: -9999; opacity: 0; -webkit-transition: 0.3s ease-out;}
+nav ul li:hover > ul { display: block; z-index: 1000; opacity: 1; top: 95%; position:absolute; }
+
+nav ul li > ul li:first-child { border-radius: 4px 4px 0 0; padding-top: 3px; }
+nav ul li > ul li:last-child { border-radius: 0 0 4px 4px; }
+nav ul li > ul li { padding: 0 3px 3px; background: #050505; width: 100%; }
+nav ul li > ul li a { display: block; padding: 6px 9px; border-radius: 2px; font-size: 16px; }
+nav ul li#men > ul li:hover > a {color: #4DACFF; background: #353535;} 
+nav ul li#women > ul li:hover > a {color: #FF4282; background: #353535;} 
+
+/* SUB SUB MENU */
+nav ul li > ul li > ul:before {
+	content: "";
+	border-style: solid;
+	border-width: 0 9px 9px 9px;
+	border-color: transparent transparent #050505 transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	-webkit-transform: rotate(270deg);
+}
+
+nav ul li > ul li > ul { top: 0; left: 90%; padding: 0; padding-left: 13px; -webkit-transition: 0.3s ease-out; }
+nav ul li > ul li:hover > ul { display: block; opacity: 1; z-index: 100; top: 0; left: 100%; }

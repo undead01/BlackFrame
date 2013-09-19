@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome to BlackFrame!</title>
+    <link rel="stylesheet" href="~/css/MenuBarStyleSheet.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function onMouseOver() {
+            container.style.zIndex = 3;
+        }
+
+        function onMouseOut() {
+            container.style.zIndex = 1;
+        }
+    </script>
+</head>
+<body background="background.jpg">
+    <form id="form1" runat="server">
+    <div id="container" style="position:relative; z-index:1;">
+        <nav>
+                    <ul onmouseover="onMouseOver()" onmouseout="onMouseOut()">
+                        <li id="men"><a href="#">Men</a>
+                            <ul>
+                                <li><a href="#">Hats</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Bottoms</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li id="women"><a href="#">Women</a>
+                            <ul>
+                                <li><a href="#">Hats</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Bottoms</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+    </div>
+    <div style="width: 960px; height: 30px; margin: auto; position:relative; z-index:2;"></div>
+    <div id="cph" style="position:relative; z-index:2;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

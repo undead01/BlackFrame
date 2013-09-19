@@ -1,0 +1,20 @@
+﻿#slider {
+padding:15px 0;
+}
+#slider .pagination {
+    list-style:none outside none;
+    padding:15px !important;
+}
+#slider .pagination li {
+    cursor:pointer;
+    display:inline-block;
+    margin-left:0;
+    background-color:#888;
+    border-radius:10px 10px 10px 10px;
+    height:8px;
+    text-indent:10000px;
+    width:8px;
+}
+#slider .pagination li.current {
+    background-color:#000;
+}
